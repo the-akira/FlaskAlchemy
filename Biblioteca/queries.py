@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from biblioteca_sqlalchemy import Autor, Livro, Base
 
-engine = create_engine('sqlite:///livros_sqlalchemy.db')
+engine = create_engine('sqlite:///biblioteca.db')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
@@ -22,7 +22,7 @@ session.close()
 # >>> from sqlalchemy import create_engine
 # >>> from sqlalchemy.orm import sessionmaker
 # >>> from biblioteca_sqlalchemy import Autor, Livro, Base
-# >>> engine = create_engine('sqlite:///livros_sqlalchemy.db')
+# >>> engine = create_engine('sqlite:///biblioteca.db')
 # >>> Base.metadata.bind = engine
 # >>> DBSession = sessionmaker(bind=engine)
 # >>> session = DBSession()

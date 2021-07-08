@@ -45,4 +45,4 @@ class Livro(db.Model):
 		return f'Livro("{self.titulo}")'
 
 if __name__ == '__main__':
-	app.run(debug=True)
+    app.run(debug=True)

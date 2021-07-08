@@ -14,15 +14,15 @@ mysql = MySQL(app)
 # Routes
 @app.route('/')
 def index():
-	cur = mysql.connection.cursor()
-	# cur.execute('''CREATE TABLE example (id INTEGER, name VARCHAR(20))''')
-	# cur.execute('''INSERT INTO example VALUES (1, 'Gabriel')''')
-	# cur.execute('''INSERT INTO example VALUES (2, 'Rafael')''')
-	# mysql.connection.commit()
-	cur.execute('''SELECT * FROM example''')
-	results = cur.fetchall()
-	print(results)
-	return 'Done'
+    cur = mysql.connection.cursor()
+    cur.execute('''CREATE TABLE example (id INTEGER, name VARCHAR(20))''')
+    cur.execute('''INSERT INTO example VALUES (1, 'Gabriel')''')
+    cur.execute('''INSERT INTO example VALUES (2, 'Rafael')''')
+    mysql.connection.commit()
+    cur.execute('''SELECT * FROM example''')
+    results = cur.fetchall()
+    print(results)
+    return 'Done'
 
 if __name__ == '__main__':
-	app.run(debug=True)
+    app.run(debug=True)

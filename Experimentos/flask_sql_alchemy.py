@@ -11,23 +11,23 @@ db = SQLAlchemy(app)
 # db.create_all()
 
 class User(db.Model):
-	id = db.Column(db.Integer, primary_key=True)
-	name = db.Column(db.String(50))
-	location = db.Column(db.String(50))
-	date_created = db.Column(db.DateTime, default=datetime.now)
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50))
+    location = db.Column(db.String(50))
+    date_created = db.Column(db.DateTime, default=datetime.now)
 
 @app.route('/<name>/<location>')
 def index(name, location):
-	user = User(name=name, location=location)
-	db.session.add(user)
-	db.session.commit()
+    user = User(name=name, location=location)
+    db.session.add(user)
+    db.session.commit()
 
-	return '<h1>Usuário Adicionado</h1>'
+    return '<h1>Usuário Adicionado</h1>'
 
 @app.route('/<name>')
 def get_user(name):
-	user = User.query.filter_by(name=name).first()
-	return f'The {user.name} is located in {user.location}'
+    user = User.query.filter_by(name=name).first()
+    return f'The {user.name} is located in {user.location}'
 
 if __name__ == '__main__':
-	app.run(debug=True)
+    app.run(debug=True)

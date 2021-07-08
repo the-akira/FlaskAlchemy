@@ -7,10 +7,10 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 class MyTable(db.Model):
-	id = db.Column(db.Integer, primary_key=True) # Define chave-primária
-	unique_col = db.Column(db.String(50), unique=True) # Define um valor único
-	notnull = db.Column(db.String(20), nullable=False) # Define uma coluna que não pode ser nula
-	default = db.Column(db.Integer, server_default='10')
+    id = db.Column(db.Integer, primary_key=True) # Define chave-primária
+    unique_col = db.Column(db.String(50), unique=True) # Define um valor único
+    notnull = db.Column(db.String(20), nullable=False) # Define uma coluna que não pode ser nula
+    default = db.Column(db.Integer, server_default='10')
 
 ## Inicializando o Banco de Dados
 # from constraints import db
