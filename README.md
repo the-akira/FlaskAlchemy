@@ -1,13 +1,19 @@
-<h1 align="center">Flask Alquímia</h1>
+# Alquímia com Flask
 
-<h1 align="center">
-    <img alt="Python" title="Flask-Alquímia" src="https://i.imgur.com/mrjV2ru.png"> </br>
-</h1>
+![img](https://raw.githubusercontent.com/the-akira/FlaskAlchemy/master/FlaskAlchemy.png)
 
-Experimentos e exemplos com **[Flask](https://flask.palletsprojects.com/en/1.1.x/)**, **[Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)** e **[SQLAlchemy](https://www.sqlalchemy.org/)**
+Experimentos e exemplos com **[Flask](https://flask.palletsprojects.com/en/1.1.x/)**, **[Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)** e **[SQLAlchemy](https://www.sqlalchemy.org/)**.
 
-Para experimentos com os códigos, apenas crie um clone do repositório:
+Para experimentar os códigos, faça um clone do repositório:
 
 ```
-git clone https://github.com/the-akira/flask-alquimia.git
+git clone https://github.com/the-akira/FlaskAlchemy.git
+```
+
+Instale as bibliotecas:
+
+```
+pip install Flask
+pip install SQLAlchemy
+pip install Flask-SQLAlchemy
 ```
