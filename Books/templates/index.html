@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Books</h1>
+<a href="{{url_for('new_book')}}">New Book</a>
+<ul>
+    {% for book in books %}
+        <li>{{book.title}} : {{book.author}} : {{book.genre}}</li>
+        <a href="{{url_for('edit_book', book_id = book.id )}}">Edit</a>
+        <a href="{{url_for('delete_book', book_id = book.id )}}">Delete</a>
+    {% endfor %}
+</ul>
+{% endblock content %}

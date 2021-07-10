@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Edit Book</h2>
+<form action="{{ url_for('edit_book', book_id=book.id) }}" method="post">
+    <div class="form-group">
+        <label for="name">Title:</label>
+        <input type="text" name="title" value="{{ book.title }}" required>
+        <label for="name">Author:</label>
+        <input type="text" name="author" value="{{ book.author }}" required>
+        <label for="name">Genre:</label>
+        <input type="text" name="genre" value="{{ book.genre }}" required>
+        <button type="submit">Save</button>
+        <a href="{{url_for('index')}}">Cancel</a>
+    </div>
+</form>
+{% endblock content %}

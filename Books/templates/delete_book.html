@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Delete Book</h2>
+<form action="{{ url_for('delete_book', book_id=book.id) }}" method="post">
+    <p>{{ book.title }} : {{ book.author }} : {{ book.genre }}</p>
+    <button type="submit">Delete</button>
+    <a href="{{url_for('index')}}">Cancel</a>
+</form>
+{% endblock content %}
